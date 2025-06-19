@@ -17,3 +17,8 @@ spec:
         image: puthurjohnny/vulnerablerepos:5
         ports:
         - containerPort: 4000
+        env:
+        - name: MONGODB_URI
+          value: mongodb://mongodb-service:27017/nodegoat
+        - name: NODE_ENV
+          value: production
