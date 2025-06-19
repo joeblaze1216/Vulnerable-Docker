@@ -29,7 +29,7 @@ jobs:
           args:
             # Unique keys of your project and organization. You can find them in SonarCloud > Information (bottom-left menu)
             # mandatory
-            -Dsonar.projectKey=joeblaze1216_devsecops-dotnet-github-actions-end-to-end-assignment
+            -Dsonar.projectKey=joeblaze1216_Vulnerable-Docker
             -Dsonar.organization=joeblaze1216
       # If you wish to fail your job when the Quality Gate is red, uncomment the
       # following lines. This would typically be used to fail a deployment.
