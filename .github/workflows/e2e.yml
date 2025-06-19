@@ -1,4 +1,4 @@
-name: "Run SAST, Build and push Vulnerable node image, scan image, N Update deployment and version txt files"
+name: "Run SAST, Build and push Vulnerable node image, scan image, N Update deployment and version txt"
  
 on:
   push:
