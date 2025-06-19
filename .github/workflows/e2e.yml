@@ -94,7 +94,7 @@ jobs:
       - name: Update Deployment YAML
         run: |
           git pull
-          sed -i "s|image: puthurjohnny/vulnerablerepos:.*$|image: puthurjohnny/vulnerablerepos:${{ env.VERSION }}|" deployment.yaml
+          sed -i "s|image: puthurjohnny/vulnerablerepos:.*$|image: puthurjohnny/vulnerablerepos:${{ env.VERSION }}|" k8s/deployment.yaml
           echo ${{ env.VERSION }} > version.txt
           CURRENT_VERSION=$(cat version.txt)
           git add deployment.yaml version.txt
