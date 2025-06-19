@@ -1,7 +1,8 @@
 
 🛡️ Application Security Portfolio: Full CI/CD Pipeline with SAST, SCA, Container Image Scan, and DAST for OWASP NodeGoat
 
-![OWASP NodeGoat](https://owasp.org/assets/images/projects/nodegoat.png)
+ ![image](https://github.com/user-attachments/assets/9e198b6f-7da2-4fa9-8403-7e3c0fc08993)
+
 
 🔍 Seeking opportunities in Application Security / Product Security Engineering
 
