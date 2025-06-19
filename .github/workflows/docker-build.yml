@@ -26,4 +26,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: yourdockerhub/nodegoat:latest
+        tags: puthurjohnny/vulnerablerepos:3
