@@ -97,6 +97,6 @@ jobs:
           sed -i "s|image: puthurjohnny/vulnerablerepos:.*$|image: puthurjohnny/vulnerablerepos:${{ env.VERSION }}|" k8s/deployment.yml
           echo ${{ env.VERSION }} > version.txt
           CURRENT_VERSION=$(cat version.txt)
-          git add deployment.yaml version.txt
+          git add k8s/deployment.yml version.txt
           git commit -m "Updated deployment yaml and version txt file with vulnerable image tag to ${CURRENT_VERSION}"
           git push
