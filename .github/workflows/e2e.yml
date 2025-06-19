@@ -17,7 +17,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for better analysis relevance
+          fetch-depth: 0 
  
       - name: SonarQube Scan
         uses:  SonarSource/sonarqube-scan-action@v5
@@ -25,10 +25,9 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          # Additional arguments for the SonarScanner CLI
+       
           args:
-            # Unique keys of your project and organization. You can find them in SonarCloud > Information (bottom-left menu)
-            # mandatory
+             # mandatory
             -Dsonar.projectKey=joeblaze1216_Vulnerable-Docker
             -Dsonar.organization=joeblaze1216
       # If you wish to fail your job when the Quality Gate is red, uncomment the
@@ -50,6 +49,9 @@ jobs:
         continue-on-error: true
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+   
+          
+          
 
 
   build_push_vulnerable_docker_image:
@@ -89,7 +91,7 @@ jobs:
         with:
           input: ${{ github.workspace }}/vulnerabledockerimage.tar
           exit-code: '0'
-          severity: 'CRITICAL,HIGH'
+          severity: 'CRITICAL,HIGH,LOW'
           
   update_k8s_yaml_version_file_with_latest_image_tag:
     runs-on: ubuntu-latest
