@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: nodegoat  
-        image: puthurjohnny/vulnerablerepos:2
+        image: puthurjohnny/vulnerablerepos:3
         ports:
         - containerPort: 4000
