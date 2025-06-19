@@ -100,3 +100,5 @@ jobs:
           git add k8s/deployment.yml version.txt
           git commit -m "Updated deployment yaml and version txt file with vulnerable image tag to ${CURRENT_VERSION}"
           git push
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
